@@ -1,0 +1,74 @@
+('cvpr','ijcv','icra','iccv','icml','nips','jmlr','acl','taslp','emnlp','aaai','tfs','dss','prl','aamas','ijcai','cviu','neural networks','icpr','ieee transactions on neural networks','ijar','nc','bmvc','computer speech language','international journal of applied evolutionary computation','gecco','cl','coling','ieee transactions on affective computing','jair','kr','nca','icdar','ijcnn','aim','icaps','ecai','colt','ijis','jar','ijdar','ci','tap','eccv','natural language engineering','uai','npl','machine translation','icb','alt','paa','ictai','naacl','nca','accv','dss','iccbr','ijprai','wias','ida','ilp','jetai','tslp','pricai','ksem','ijcia','icann','iconip','talip','aamas','kbs','ai')
+
+cvpr
+ijcv
+icra
+iccv
+icml
+nips
+jmlr
+acl
+taslp
+emnlp
+aaai
+tfs
+dss
+prl
+aamas
+ijcai
+cviu
+neural networks
+icpr
+ieee transactions on neural networks
+ijar
+nc
+bmvc
+computer speech language
+international journal of applied evolutionary computation
+gecco
+cl
+coling
+ieee transactions on affective computing
+jair
+kr
+nca
+icdar
+ijcnn
+aim
+icaps
+ecai
+colt
+ijis
+jar
+ijdar
+ci
+tap
+eccv
+natural language engineering
+uai
+npl
+machine translation
+icb
+alt
+paa
+ictai
+naacl
+nca
+accv
+dss
+iccbr
+ijprai
+wias
+ida
+ilp
+jetai
+tslp
+pricai
+ksem
+ijcia
+icann
+iconip
+talip
+aamas
+kbs
+ai

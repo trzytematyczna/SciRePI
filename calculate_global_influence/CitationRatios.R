@@ -1,6 +1,6 @@
 source("PrepareXForHCP.R")
 
-CitationRatios <- function(hcp, confStartYear, confCitations, confLastYear = 2016, dir = "../data/") {
+CitationRatios <- function(hcp, confStartYear, confCitations, confLastYear = 2017, dir = "../data/") {
   uniqueYears <- unique(confCitations$current_year)
   confPubYears <- read.csv(paste(dir, "conferences_first_publication_year.csv", sep = "/"), stringsAsFactors = FALSE)
   citationRatios <- rep(0, confLastYear-confStartYear)

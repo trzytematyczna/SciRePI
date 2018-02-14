@@ -17,7 +17,7 @@ Experiment <- function(hcp,
   dataFilenames <- list.files(dirData, pattern="*\\.csv")
   filesVisited <- logical(length(dataFilenames))
   confInfluences <- setNames(data.frame(matrix(ncol = 4, nrow = 0)), c("confA", "confB", "infAB", "infBA"))
-  
+  #dataFilenames <- c("ai-aim_1970-2016.csv", "aim-ai_1970-2016.csv")
   for (idx in 1:length(dataFilenames)) {
     # Skip already visited files
     if (filesVisited[idx]) {
@@ -27,17 +27,23 @@ Experiment <- function(hcp,
     dataFileNameAB <- dataFilenames[idx]
     # Extract names of conferences involved (A->B)
     confNames <- ExtractConf(dataFileNameAB)
+    if (confNames[1] == confNames[2]){#identical(confNames[1], confNames[2])) {
+      next()
+    }
     # Locate filename of reverse data file (B->A) 
     reverseDataFileName <- paste(confNames[2], confNames[1], sep="-")
-    idx2 <- which(grepl(paste("^", reverseDataFileName, sep=""), dataFilenames))
+    idx2 <- which(grepl(paste("^", reverseDataFileName, "_", sep=""), dataFilenames))
     dataFileNameBA <- dataFilenames[idx2]
     # Mark both data files (A->B, B->A) as visited
     filesVisited[c(idx, idx2)] <- TRUE
     # Open bi-directional conferences data files (A->B, B->A)
+    cat(sprintf("Processing files: %s and %s\n", dataFileNameAB, dataFileNameBA))
     dataBA <- read.csv(paste(dirData, dataFileNameAB, sep="/"))
     dataAB <- read.csv(paste(dirData, dataFileNameBA, sep="/"))
+
     # If any of conference files is empty then skip
     if (nrow(dataAB) == 0 || nrow(dataBA) == 0) {
+      cat(sprintf("%s nrow: %d; %s nrow: %d\n", dataFileNameAB, nrow(dataAB), dataFileNameBA, nrow(dataBA)))
       next()
     }
     # Compute citation ratio time series for both directions (A->B, B->A)

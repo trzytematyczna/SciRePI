@@ -22,8 +22,9 @@ Experiment <- function(influenceFile = "../results/TimeSeriesExperiments/results
     result <- rbind(result, data.frame(name = V(g)[vid]$name, ema = V(g)[vid]$ema))
   }
   V(g)[is.na(V(g)$ema)]$ema <- 0
+  
 #  gpr <- BuildPageRankGraph(V(g)$name)
 #  VisualizeGraph(g, gpr)
 #  gpr
-  result
+  g
 }

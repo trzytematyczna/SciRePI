@@ -1,0 +1,26 @@
+venue,emaRank,hindexRank,rankGASpearman
+ai,1,4,1
+nips,2,41,2
+ijcv,10,3,3
+acl,3,24,4
+neural networks,21,1,5
+dss,54,2,6
+kbs,51,5,7
+jmlr,15,9,8
+ieee transactions on neural networks,8,12,9
+prl,20,7,10
+cvpr,6,13,11
+nca,53,8,12
+cviu,25,6,13
+aim,31,16,14
+jair,17,10,15
+icpr,11,49,16
+tfs,34,17,17
+eccv,12,20,18
+aaai,19,39,19
+uai,18,61,20
+iccv,22,21,21
+emnlp,13,22,22
+naacl,16,45,23
+coling,7,37,24
+aamas,26,14,25

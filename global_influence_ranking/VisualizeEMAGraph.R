@@ -1,10 +1,13 @@
 VisualizeEMAGraph <- function(g, title) {
-  layout <- layout_in_circle(g, order=order(V(g)$ema))
+  layout <- layout_nicely(g)
   plot(g, 
        vertex.size=rank(V(g)$ema)*0.5,
-       edge.arrow.size=.2, 
+       edge.arrow.size=.15, 
        layout=layout,
-       vertex.label.color="navy",
-       vertex.label.cex=1.2)
+       vertex.frame.color="grey",
+       edge.color="grey",
+       vertex.color="lightblue",
+       vertex.label.color="black",
+       vertex.label.cex=1.3)
   title(title)
 }
